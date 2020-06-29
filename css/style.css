@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --darkBlue: hsl(249, 10%, 26%);
+  --grayishBlue: hsl(246, 25%, 77%);
+  --ourterBoxShadow: 0px 8px hsla(257, 7%, 39%, 0.25);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  background: var(--red) url(../images/bg-intro-mobile.png) center/cover
+    no-repeat;
+}
+
+.container {
+  margin: 100px auto;
+}
+
+.header {
+  margin-bottom: 50px;
+}
+
+.header h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.trial {
+  text-transform: initial;
+  padding: 20px 60px;
+  height: auto;
+  line-height: normal;
+  background-color: var(--blue);
+  border-radius: 10px;
+  box-shadow: var(--ourterBoxShadow);
+  margin-bottom: 25px;
+}
+
+.trial span {
+  font-weight: bold;
+}
+
+.form-container {
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: var(--ourterBoxShadow);
+}
+
+label {
+  font-size: 15px;
+  position: relative;
+  top: 45px;
+  left: -30%;
+  font-weight: bold;
+  color: var(--darkBlue);
+  text-align: left !important;
+}
+
+label[for='email'] {
+  left: -25%;
+}
+
+.input {
+  border: 1px solid var(--grayishBlue) !important;
+  border-radius: 5px !important;
+  padding: 0px 0px 0px 20px !important;
+  color: var(--darkBlue) !important;
+  font-size: 15px !important;
+  font-weight: bold !important;
+  box-sizing: border-box !important;
+  height: 60px !important;
+}
+
+.error {
+  border: 2px solid var(--red) !important;
+  border-radius: 5px !important;
+  padding: 0px 0px 0px 20px !important;
+  color: var(--red) !important;
+  font-size: 15px !important;
+  font-weight: bold !important;
+  box-sizing: border-box !important;
+  height: 60px !important;
+}
+
+.icon {
+  width: 22px;
+  padding-top: 20px;
+  left: 80%;
+  position: absolute;
+  opacity: 0;
+}
+
+.submit {
+  width: 100%;
+  background-color: var(--green);
+  font-size: 17px;
+  padding: 10px;
+  margin-top: 10px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: inset 0px -5px hsla(253, 7%, 39%, 0.3);
+}
+
+.terms {
+  color: var(--darkBlue);
+  font-size: 11px !important;
+  padding: 20px;
+  opacity: 0.6;
+  font-weight: 600;
+}
+
+.terms span {
+  color: var(--red);
+  font-weight: bold;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: -60px;
+}
+.attribution a {
+  color: var(--green);
+}
+
+@media screen and (min-width: 600px) {
+  label {
+    left: -38%;
+  }
+
+  label[for='email'] {
+    left: -35%;
+  }
+
+  .icon {
+    left: 83%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url(../images/bg-intro-desktop.png);
+    background-size: 100% 100%;
+    height: 100vh;
+    padding-top: 5%;
+  }
+
+  label {
+    left: -40%;
+  }
+
+  label[for='email'] {
+    left: -38%;
+  }
+}
+
+@media screen and (min-height: 600px) {
+  body {
+    padding-top: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 75%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .header {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    padding-top: 20%;
+    padding-right: 80px;
+    text-align: left;
+  }
+
+  .header h1 {
+    font-size: 50px;
+  }
+
+  .header p {
+    font-size: 15px;
+  }
+
+  label {
+    left: -38%;
+  }
+
+  label[for='email'] {
+    left: -34%;
+  }
+}
